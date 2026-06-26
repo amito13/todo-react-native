@@ -5,10 +5,9 @@ import CreateTodo from "./CreateTodo";
 export default function Index() {
   return (
     <View style={{ flex: 1 }}>
-    <CreateTodo />
-
+    <CreateTodo/>
     <View style={{ flex: 1 }}>
-        <Todos />
+        <Todos  />
     </View>
 </View>
   );

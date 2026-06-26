@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Text,
   View,
+  
 } from "react-native";
 
 interface Todo {
@@ -27,7 +28,7 @@ const Todos = () => {
       setError("");
 
       const response = await fetch(
-        "http://192.168.29.177:8000/todo/todos"
+        "https://todo-mobile-588k.onrender.com/todo/todos"
       );
 
       if (!response.ok) {
@@ -45,10 +46,10 @@ const Todos = () => {
       setRefreshing(false);
     }
   }, []);
-
-  useEffect(() => {
-    fetchTodos();
-  }, [fetchTodos]);
+useEffect(() => {
+  fetchTodos();
+}, [fetchTodos]);
+ 
 
   const onRefresh = () => {
     setRefreshing(true);

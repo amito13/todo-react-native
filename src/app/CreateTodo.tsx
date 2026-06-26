@@ -7,7 +7,9 @@ import {
   StyleSheet,
   Alert,
 } from "react-native";
-
+// type Props = {
+//   onTodoCreated: () => void;
+// };
 const CreateTodo = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -23,7 +25,7 @@ const CreateTodo = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://192.168.29.177:8000/todo/createTodos",
+        "https://todo-mobile-588k.onrender.com/todo/createTodos",
         {
           method: "POST",
           headers: {
@@ -42,7 +44,7 @@ const CreateTodo = () => {
 
       if (response.ok) {
         Alert.alert("Success", data.message);
-
+         // onTodoCreated();
         setTitle("");
         setDescription("");
       } else {
