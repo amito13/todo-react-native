@@ -28,7 +28,7 @@ const Todos = () => {
       setError("");
 
       const response = await fetch(
-        "https://todo-mobile-588k.onrender.com/todo/todos"
+        process.env.EXPO_PUBLIC_API_KEY_GET_TODO!
       );
 
       if (!response.ok) {

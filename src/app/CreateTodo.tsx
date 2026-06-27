@@ -25,7 +25,7 @@ const CreateTodo = () => {
       setLoading(true);
 
       const response = await fetch(
-        "https://todo-mobile-588k.onrender.com/todo/createTodos",
+        process.env.EXPO_PUBLIC_API_KEY_CREATE_TODO!,
         {
           method: "POST",
           headers: {
